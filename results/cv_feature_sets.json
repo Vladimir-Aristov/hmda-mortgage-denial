@@ -1,0 +1,91 @@
+{
+ "A: application-time only": {
+  "n_features": 23,
+  "auc": 0.7891024919914362,
+  "auc_sd": 0.0030191651501119536,
+  "pr_auc": 0.40065680762706046,
+  "pr_auc_sd": 0.005789537922073239
+ },
+ "B: + underwriting values, missingness neutralised": {
+  "n_features": 27,
+  "auc": 0.8575646811336284,
+  "auc_sd": 0.0030013958362812357,
+  "pr_auc": 0.604046289813672,
+  "pr_auc_sd": 0.005851823453013813
+ },
+ "C: + raw missing/N-A codes and AUS": {
+  "n_features": 28,
+  "auc": 0.8681805066762929,
+  "auc_sd": 0.0034270983091228596,
+  "pr_auc": 0.6275234923095049,
+  "pr_auc_sd": 0.005501100243655782
+ },
+ "D: + post-decision fields (naive)": {
+  "n_features": 38,
+  "auc": 1.0,
+  "auc_sd": 0.0,
+  "pr_auc": 1.0,
+  "pr_auc_sd": 4.965068306494546e-17
+ },
+ "E: D with the leakage auditor in the pipeline": {
+  "n_features": 38,
+  "auc": 0.8970287890415267,
+  "auc_sd": 0.003771382967449646,
+  "pr_auc": 0.7134236029257863,
+  "pr_auc_sd": 0.005590535001558973,
+  "dropped_per_fold": [
+   [
+    "preapproval",
+    "interest_rate",
+    "rate_spread",
+    "total_loan_costs",
+    "lender_credits",
+    "purchaser_type",
+    "hoepa_status",
+    "denial_reason_ctrl"
+   ],
+   [
+    "preapproval",
+    "interest_rate",
+    "rate_spread",
+    "total_loan_costs",
+    "lender_credits",
+    "purchaser_type",
+    "hoepa_status",
+    "denial_reason_ctrl"
+   ],
+   [
+    "preapproval",
+    "interest_rate",
+    "rate_spread",
+    "total_loan_costs",
+    "lender_credits",
+    "purchaser_type",
+    "hoepa_status",
+    "denial_reason_ctrl"
+   ],
+   [
+    "preapproval",
+    "interest_rate",
+    "rate_spread",
+    "total_loan_costs",
+    "lender_credits",
+    "purchaser_type",
+    "hoepa_status",
+    "denial_reason_ctrl"
+   ],
+   [
+    "preapproval",
+    "interest_rate",
+    "rate_spread",
+    "total_loan_costs",
+    "lender_credits",
+    "purchaser_type",
+    "hoepa_status",
+    "denial_reason_ctrl"
+   ]
+  ]
+ },
+ "n_cv": 399999,
+ "base_rate": 0.0880652201630504
+}

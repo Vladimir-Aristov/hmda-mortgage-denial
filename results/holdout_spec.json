@@ -1,0 +1,9 @@
+{
+ "holdout": "all 2025 HMDA home-purchase applications in the analysis sample",
+ "file": "data/sample_2025.parquet",
+ "sha256": "9929d430d6fa6990bfb4b36c859493731b56144c6962d3ead30ddc48a57325bf",
+ "n_rows": 3139327,
+ "rule": "not used for anything except the final, one-time validation",
+ "training_data": "data/sample_2024.parquet (all model selection by CV inside 2024)",
+ "fixed_on": "2026-10-10"
+}

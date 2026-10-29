@@ -1,0 +1,60 @@
+{
+ "model": "B",
+ "config": {
+  "iterations": 4000,
+  "learning_rate": 0.1,
+  "depth": 8
+ },
+ "n_train": 2740857,
+ "best_iter": 3174,
+ "minutes": 116.4,
+ "auc": 0.8878521305702841,
+ "pr_auc": 0.6789068855059675,
+ "brier": 0.04487174730996356,
+ "log_loss": 0.17140103744302582,
+ "mean_pred": 0.08756899080231617,
+ "base_rate": 0.08897333333333333,
+ "prec_at_recall": {
+  "0.3": {
+   "precision": 0.9903536977491961,
+   "flag_share": 0.026953333333333333
+  },
+  "0.49": {
+   "precision": 0.8385690473137581,
+   "flag_share": 0.051993333333333336
+  },
+  "0.7": {
+   "precision": 0.41060519491935127,
+   "flag_share": 0.15168666666666666
+  }
+ },
+ "importance_top15": {
+  "lei": 15.95,
+  "debt_to_income_ratio": 6.16,
+  "loan_type": 6.01,
+  "loan_to_value_ratio": 5.22,
+  "ltv_over_max": 4.78,
+  "subordinate_gap": 4.64,
+  "lender_log_apps": 4.31,
+  "lender_fha_share": 3.96,
+  "property_value": 3.4,
+  "income": 2.98,
+  "lender_median_lti": 2.72,
+  "income_rel_area": 2.5,
+  "dti_num": 2.47,
+  "tract_minority_population_percent": 2.45,
+  "state_code": 2.23
+ },
+ "rules": {
+  "DTI>=50 or LTV>100": {
+   "recall": 0.4949048404016185,
+   "precision": 0.2508211973341941,
+   "flag_share": 0.17555666666666667
+  },
+  "DTI>43 or LTV>97": {
+   "recall": 0.7004720515510265,
+   "precision": 0.1294008540442525,
+   "flag_share": 0.48163
+  }
+ }
+}

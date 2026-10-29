@@ -1,0 +1,156 @@
+== building the sample
+2024: raw rows 4,319,109 -> sample 3,140,857; denial rate 0.0881
+== training model B on all rows  (14:41)
+0:	learn: 0.5801096	test: 0.5802145	best: 0.5802145 (0)	total: 1.74s	remaining: 1h 56m 8s
+200:	learn: 0.1784696	test: 0.1789443	best: 0.1789443 (200)	total: 6m 10s	remaining: 1h 56m 49s
+400:	learn: 0.1738196	test: 0.1754957	best: 0.1754957 (400)	total: 13m 38s	remaining: 2h 2m 30s
+600:	learn: 0.1714330	test: 0.1741301	best: 0.1741301 (600)	total: 21m 1s	remaining: 1h 58m 52s
+800:	learn: 0.1696061	test: 0.1732930	best: 0.1732930 (800)	total: 28m 29s	remaining: 1h 53m 48s
+1000:	learn: 0.1680630	test: 0.1726902	best: 0.1726902 (1000)	total: 35m 43s	remaining: 1h 47m
+1200:	learn: 0.1667797	test: 0.1723542	best: 0.1723542 (1200)	total: 43m 11s	remaining: 1h 40m 38s
+1400:	learn: 0.1655677	test: 0.1720521	best: 0.1720484 (1396)	total: 50m 34s	remaining: 1h 33m 48s
+1600:	learn: 0.1644393	test: 0.1718305	best: 0.1718286 (1599)	total: 57m 41s	remaining: 1h 26m 26s
+1800:	learn: 0.1633590	test: 0.1716283	best: 0.1716283 (1800)	total: 1h 4m 42s	remaining: 1h 19m
+2000:	learn: 0.1623386	test: 0.1714330	best: 0.1714281 (1991)	total: 1h 11m 50s	remaining: 1h 11m 46s
+2200:	learn: 0.1613244	test: 0.1713039	best: 0.1712976 (2195)	total: 1h 19m 6s	remaining: 1h 4m 39s
+2400:	learn: 0.1604532	test: 0.1711721	best: 0.1711720 (2398)	total: 1h 26m 9s	remaining: 57m 22s
+2600:	learn: 0.1595853	test: 0.1711080	best: 0.1710964 (2569)	total: 1h 33m 4s	remaining: 50m 3s
+2800:	learn: 0.1586092	test: 0.1710150	best: 0.1710132 (2790)	total: 1h 39m 58s	remaining: 42m 47s
+3000:	learn: 0.1577493	test: 0.1709019	best: 0.1708974 (2985)	total: 1h 46m 47s	remaining: 35m 32s
+3200:	learn: 0.1568992	test: 0.1708103	best: 0.1707944 (3174)	total: 1h 53m 27s	remaining: 28m 19s
+Stopped by overfitting detector  (100 iterations wait)
+
+bestTest = 0.1707943858
+bestIteration = 3174
+
+Shrink model to first 3175 iterations.
+{
+ "model": "B",
+ "config": {
+  "iterations": 800,
+  "learning_rate": 0.1,
+  "depth": 8
+ },
+ "n_train": 2740857,
+ "best_iter": 3174,
+ "minutes": 116.4,
+ "auc": 0.8878521305702841,
+ "pr_auc": 0.6789068855059675,
+ "brier": 0.04487174730996356,
+ "log_loss": 0.17140103744302582,
+ "mean_pred": 0.08756899080231617,
+ "base_rate": 0.08897333333333333,
+ "prec_at_recall": {
+  "0.3": {
+   "precision": 0.9903536977491961,
+   "flag_share": 0.026953333333333333
+  },
+  "0.49": {
+   "precision": 0.8385690473137581,
+   "flag_share": 0.051993333333333336
+  },
+  "0.7": {
+   "precision": 0.41060519491935127,
+   "flag_share": 0.15168666666666666
+  }
+ },
+ "importance_top15": {
+  "lei": 15.95,
+  "debt_to_income_ratio": 6.16,
+  "loan_type": 6.01,
+  "loan_to_value_ratio": 5.22,
+  "ltv_over_max": 4.78,
+  "subordinate_gap": 4.64,
+  "lender_log_apps": 4.31,
+  "lender_fha_share": 3.96,
+  "property_value": 3.4,
+  "income": 2.98,
+  "lender_median_lti": 2.72,
+  "income_rel_area": 2.5,
+  "dti_num": 2.47,
+  "tract_minority_population_percent": 2.45,
+  "state_code": 2.23
+ },
+ "rules": {
+  "DTI>=50 or LTV>100": {
+   "recall": 0.4949048404016185,
+   "precision": 0.2508211973341941,
+   "flag_share": 0.17555666666666667
+  },
+  "DTI>43 or LTV>97": {
+   "recall": 0.7004720515510265,
+   "precision": 0.1294008540442525,
+   "flag_share": 0.48163
+  }
+ }
+}
+== training model A on all rows  (16:38)
+0:	learn: 0.5938263	test: 0.5939807	best: 0.5939807 (0)	total: 1.86s	remaining: 2h 3m 48s
+200:	learn: 0.2276536	test: 0.2283745	best: 0.2283745 (200)	total: 5m 44s	remaining: 1h 48m 27s
+400:	learn: 0.2246398	test: 0.2264810	best: 0.2264810 (400)	total: 11m 22s	remaining: 1h 42m 5s
+600:	learn: 0.2227907	test: 0.2256534	best: 0.2256534 (600)	total: 16m 55s	remaining: 1h 35m 40s
+800:	learn: 0.2213212	test: 0.2252236	best: 0.2252236 (800)	total: 22m 28s	remaining: 1h 29m 45s
+1000:	learn: 0.2201214	test: 0.2249355	best: 0.2249355 (1000)	total: 28m 3s	remaining: 1h 24m 2s
+1200:	learn: 0.2189902	test: 0.2247211	best: 0.2247211 (1200)	total: 33m 30s	remaining: 1h 18m 5s
+1400:	learn: 0.2179211	test: 0.2245544	best: 0.2245544 (1400)	total: 38m 55s	remaining: 1h 12m 11s
+1600:	learn: 0.2169043	test: 0.2243915	best: 0.2243915 (1600)	total: 44m 18s	remaining: 1h 6m 22s
+1800:	learn: 0.2159358	test: 0.2243095	best: 0.2243002 (1766)	total: 49m 46s	remaining: 1h 46s
+2000:	learn: 0.2149452	test: 0.2242277	best: 0.2242277 (2000)	total: 55m 8s	remaining: 55m 5s
+2200:	learn: 0.2140579	test: 0.2241446	best: 0.2241428 (2195)	total: 1h 52s	remaining: 49m 45s
+2400:	learn: 0.2132239	test: 0.2240918	best: 0.2240892 (2333)	total: 1h 6m 16s	remaining: 44m 8s
+2600:	learn: 0.2122706	test: 0.2240625	best: 0.2240343 (2527)	total: 1h 11m 57s	remaining: 38m 42s
+Stopped by overfitting detector  (100 iterations wait)
+
+bestTest = 0.2240343366
+bestIteration = 2527
+
+Shrink model to first 2528 iterations.
+{
+ "model": "A",
+ "config": {
+  "iterations": 800,
+  "learning_rate": 0.1,
+  "depth": 8
+ },
+ "n_train": 2740857,
+ "best_iter": 2527,
+ "minutes": 73.1,
+ "auc": 0.819983021426782,
+ "pr_auc": 0.4750196435382243,
+ "brier": 0.061506804035271485,
+ "log_loss": 0.22490061846351203,
+ "mean_pred": 0.08732301687991645,
+ "base_rate": 0.08897333333333333,
+ "prec_at_recall": {
+  "0.3": {
+   "precision": 0.6453380610846966,
+   "flag_share": 0.041363333333333335
+  },
+  "0.49": {
+   "precision": 0.37677151745592813,
+   "flag_share": 0.11572
+  },
+  "0.7": {
+   "precision": 0.22967524645376994,
+   "flag_share": 0.27118
+  }
+ },
+ "importance_top15": {
+  "lei": 15.07,
+  "loan_to_income": 7.71,
+  "loan_type": 6.64,
+  "income": 6.24,
+  "pti_new_loan": 5.23,
+  "lender_fha_share": 4.67,
+  "lender_median_lti": 4.18,
+  "state_code": 4.09,
+  "lender_log_apps": 3.74,
+  "tract_minority_population_percent": 3.72,
+  "lender_broker_share": 3.5,
+  "income_rel_area": 3.43,
+  "loan_rel_area": 3.32,
+  "derived_msa-md": 3.1,
+  "tract_one_to_four_family_homes": 2.73
+ }
+}
+== done (17:51). Results: HMDA_second_submission/code/results/final_catboost_A_full.json and _B_full.json

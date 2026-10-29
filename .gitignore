@@ -1,0 +1,24 @@
+# raw and processed HMDA data (several GB) - rebuilt by the notebook / 01_build_sample.py
+data/*.csv
+data/*.csv.part
+data/*.parquet
+data/*.log
+# large model files and CatBoost working dirs
+*.cbm
+*.cbsnapshot
+catboost_info/
+results/catboost_info_*/
+results/val_pred_*.parquet
+results/done/
+# python / latex / os
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.aux
+*.log
+*.out
+*.synctex.gz
+.DS_Store
+!results/logs/*.log
+results/tuning_checkpoint.json
+results/snap_final_*

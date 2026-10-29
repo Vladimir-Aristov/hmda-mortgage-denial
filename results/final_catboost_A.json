@@ -1,0 +1,48 @@
+{
+ "model": "A",
+ "config": {
+  "iterations": 4000,
+  "learning_rate": 0.1,
+  "depth": 8
+ },
+ "n_train": 2740857,
+ "best_iter": 2527,
+ "minutes": 73.1,
+ "auc": 0.819983021426782,
+ "pr_auc": 0.4750196435382243,
+ "brier": 0.061506804035271485,
+ "log_loss": 0.22490061846351203,
+ "mean_pred": 0.08732301687991645,
+ "base_rate": 0.08897333333333333,
+ "prec_at_recall": {
+  "0.3": {
+   "precision": 0.6453380610846966,
+   "flag_share": 0.041363333333333335
+  },
+  "0.49": {
+   "precision": 0.37677151745592813,
+   "flag_share": 0.11572
+  },
+  "0.7": {
+   "precision": 0.22967524645376994,
+   "flag_share": 0.27118
+  }
+ },
+ "importance_top15": {
+  "lei": 15.07,
+  "loan_to_income": 7.71,
+  "loan_type": 6.64,
+  "income": 6.24,
+  "pti_new_loan": 5.23,
+  "lender_fha_share": 4.67,
+  "lender_median_lti": 4.18,
+  "state_code": 4.09,
+  "lender_log_apps": 3.74,
+  "tract_minority_population_percent": 3.72,
+  "lender_broker_share": 3.5,
+  "income_rel_area": 3.43,
+  "loan_rel_area": 3.32,
+  "derived_msa-md": 3.1,
+  "tract_one_to_four_family_homes": 2.73
+ }
+}

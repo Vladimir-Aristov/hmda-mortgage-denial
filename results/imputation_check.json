@@ -1,0 +1,17 @@
+{
+ "imputed_share": 0.03407333333333333,
+ "independent medians (old)": {
+  "subordinate_gap": 0.687,
+  "down_payment_to_income": 0.64,
+  "ltv_over_max": 0.582
+ },
+ "consistent (new)": {
+  "subordinate_gap": 0.53,
+  "down_payment_to_income": 0.647,
+  "ltv_over_max": 0.518
+ },
+ "never imputed": {
+  "loan_amount": 0.565,
+  "income": 0.578
+ }
+}

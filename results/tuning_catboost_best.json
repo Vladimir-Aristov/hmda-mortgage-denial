@@ -1,0 +1,12 @@
+{
+ "config": {
+  "iterations": 800,
+  "learning_rate": 0.1,
+  "depth": 8
+ },
+ "pr_auc": 0.6149648252135603,
+ "auc": 0.8615280372535017,
+ "best_iter": 442,
+ "sec": 184,
+ "rule": "fastest configuration within 0.002 PR-AUC of the best"
+}

@@ -1,0 +1,45 @@
+Loan type & A & cat & 0.0 & 4 levels; top 66\% \\
+Loan amount (\$) & A & num & 0.0 & 65,000 / 325k / 1,545k \\
+Loan term (months) & A & num & 0.2 & 180 / 360 / 360 \\
+ARM intro period (months) & A & num & 94.1 & 12.0 / 84.0 / 180 \\
+Interest-only flag & A & cat & 0.0 & 3 levels; top 98\% \\
+Balloon flag & A & cat & 0.0 & 3 levels; top 100\% \\
+Negative amortisation flag & A & cat & 0.0 & 3 levels; top 100\% \\
+Other non-amortising flag & A & cat & 0.0 & 3 levels; top 100\% \\
+Conforming status & A & cat & 0.0 & 3 levels; top 96\% \\
+Number of units & A & cat & 0.0 & 4 levels; top 98\% \\
+Income (\$000) & A & num & 0.7 & 23.0 / 111 / 732 \\
+Applicant age band & A & cat & 0.0 & 8 levels; top 33\% \\
+Co-applicant & A & cat & 0.0 & 2 levels; top 54\% \\
+Channel & A & cat & 0.0 & 3 levels; top 78\% \\
+Lender (LEI) & A & cat & 0.0 & 2663 levels; top 8\% \\
+MSA & A & cat & 0.0 & 418 levels; top 11\% \\
+State & A & cat & 0.3 & 54 levels; top 11\% \\
+Tract minority share (\%) & A & num & 0.0 & 4.54 / 30.7 / 98.2 \\
+Tract / MSA income (\%) & A & num & 0.0 & 28.0 / 106 / 244 \\
+MSA median family income (\$) & A & num & 0.0 & 60,400 / 98,600 / 164k \\
+Tract owner-occupied units & A & num & 0.0 & 161 / 1,190 / 2,959 \\
+Tract 1--4 family homes & A & num & 0.0 & 142 / 1,611 / 3,636 \\
+Tract median housing age (yrs) & A & num & 0.0 & 0.00 / 34.0 / 76.0 \\
+County & A & cat & 0.4 & 3210 levels; top 2\% \\
+Co-applicant age band & A & cat & 0.0 & 9 levels; top 54\% \\
+\midrule
+DTI (reported bins) & U & cat & 0.8 & 20 levels; top 14\% \\
+Combined LTV (\%) & U & num & 3.1 & 26.0 / 90.0 / 103 \\
+Property value (\$) & U & num & 0.9 & 85,000 / 385k / 2,225k \\
+Credit score model & U & cat & 0.0 & 15 levels; top 33\% \\
+\midrule
+Loan / income & FE & num & 1.2 & 0.66 / 2.95 / 6.48 \\
+Income / area median & FE & num & 1.6 & 0.33 / 1.13 / 7.05 \\
+Loan / area median income & FE & num & 0.4 & 0.78 / 3.34 / 13.8 \\
+New payment / income & FE & num & 1.2 & 0.05 / 0.23 / 0.54 \\
+Number of applicants & FE & cat & 0.0 & 2 levels; top 54\% \\
+Lender size (log apps) & FE & num & 0.0 & 4.49 / 9.40 / 12.4 \\
+Lender FHA share & FE & num & 0.0 & 0.00 / 0.24 / 0.60 \\
+Lender broker share & FE & num & 0.0 & 0.00 / 0.00 / 1.00 \\
+Lender median loan/income & FE & num & 0.0 & 2.07 / 2.95 / 3.63 \\
+DTI (numeric) & FE & num & 0.0 & 15.0 / 41.0 / 65.0 \\
+DTI minus program limit & FE & num & 0.0 & -35.0 / -10.0 / 15.0 \\
+LTV minus program max & FE & num & 0.0 & -71.0 / -7.00 / 5.40 \\
+Down payment / income & FE & num & 1.2 & 0.00 / 0.27 / 5.67 \\
+CLTV minus first-lien LTV & FE & num & 0.0 & -4.62 / 0.00 / 14.5 \\
